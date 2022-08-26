@@ -1,0 +1,29 @@
+<?xml
+version="1.0"
+encoding="UTF-8"?><beans
+xmlns="http://www.springframework.org/schema/beans"    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"    xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd                            http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+  <bean id="bankAccount" class="com.sprint2.springCore.BankAccount"> 
+
+<property name="accountId" value=" 570899"></property>
+ <property name="accountHolderNam" value="vartika"></property>
+<property name="accountBalance"  value="676398.89"></property>
+<property name="accountType"  value="saving"></property>
+</bean> 
+<bean id="bankAccountRepositoryImp" class="com.sprint2.springCore.BankAccountRepositoryImp" >  
+ 
+</bean>
+ <bean id="bankAccountServiceImp" class="com.sprint2.springCore.BankAccountServiceImp" >  
+ <property name="bankAccountRepositoryImp" ref="bankAccountRepositoryImp"></property>
+</bean>
+  
+
+<bean id="bankAccountController" class="com.sprint2.springCore.BankAccountController" autowire="byType">  
+ 
+</bean>
+
+
+  
+</beans>
